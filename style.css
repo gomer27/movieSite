@@ -13,6 +13,7 @@ body {
 }
 section{
     background-color: black;
+    /* padding-left: 5rem; */
 }
 /* base css end */
 
@@ -29,6 +30,7 @@ header nav {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1;
 }
 header nav .logo {
   font-size: 2.5rem;
@@ -37,6 +39,8 @@ header nav .logo {
 header nav .menu-container .menu-list {
   display: flex;
   list-style: none;
+  padding: 0;
+  column-gap: 2rem;
 }
 header nav .menu-container .menu-list .menu-list-item {
   margin: 1rem;
@@ -113,7 +117,7 @@ aside i {
 /* article(presentation) start */
 section .presentation {
   background: url(/img/spiderman.jpg);
-  height: calc(100vh);
+  height: 100vh;
   padding: 4rem 0 0 4rem;
   background-size: 100% 100%;
   background-attachment: cover;
@@ -163,4 +167,77 @@ section .presentation .presentation-buttons .info-button {
     padding: 1rem; 
 }
 /* article (filter) end*/
+/* article (movie list) start */
+.movie-list-container{
+    margin-left: 5rem;
+    color: white;
+}
+.movie-list-container h1{
+    margin: 2rem 0;
+}
+.movie-list-wrapper{
+    overflow: hidden;
+}
+.movie-list{
+    list-style: none;
+    padding: 0;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    
+}
+.movie-item{
+    position: relative;
+}
+.movie-item-img{
+    width: 25rem;
+    height: 15rem;
+    object-fit: cover;
+    transition: 0.5s all ease;
+}
+.movie-item-title{
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top:10%;
+    left: 3rem;
+    color: white;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+.movie-item-buttons{
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    bottom:10%;
+    left: 3rem;
+    color: white;
+    display: flex;
+    column-gap: 2rem;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+
+.movie-item-buttons i{
+    cursor: pointer;
+    opacity: 0.5;
+    font-size: 2rem;
+    transition: 0.5s all ease;
+}
+.movie-item:hover .movie-item-title,
+.movie-item:hover .movie-item-buttons{
+    opacity: 1;
+    transition: 1s all ease-in-out;
+}
+.movie-item:hover .movie-item-img{
+    opacity: 0.5;
+    transform:scale(1.2);
+    margin: 0 2rem;
+}
+/* article (movie list) end */
 /* section end
