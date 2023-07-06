@@ -21,10 +21,15 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3rem;
+  padding: 0 4rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 header nav .logo {
   font-size: 2.5rem;
+  color: red;
 }
 header nav .menu-container .menu-list {
   display: flex;
@@ -52,12 +57,12 @@ header nav .profile-container .profile-picture {
   object-fit: cover;
   border-radius: 50%;
 }
-.profil-text-container {
+header nav .profile-container .profil-text-container {
   display: flex;
   align-items: center;
   column-gap: 5px;
 }
-.toggle {
+header nav .profile-container .toggle {
   color: goldenrod;
   background-color: white;
   height: 1.6rem;
@@ -68,7 +73,7 @@ header nav .profile-container .profile-picture {
   align-items: center;
   justify-content: space-around;
 }
-.toggle-ball {
+header nav .profile-container .toggle .toggle-ball {
   width: 1.5rem;
   height: 1.5rem;
   background-color: black;
@@ -86,6 +91,19 @@ aside {
   color: white;
   height: 100%;
   width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+  row-gap: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+aside i {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 /* aside end */
 /* main end */
