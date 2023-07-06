@@ -156,7 +156,7 @@ section .presentation .presentation-buttons .info-button {
 /* article(presentation) end*/
 /* article (filter) start*/
 .movie-list-filter{
-    margin: 1rem 0 3rem 5rem;
+    margin: 1rem 0 0 5rem;
     padding: 2rem;
 }
 .movie-list-filter select, .movie-list-filter select:hover{
@@ -175,28 +175,31 @@ section .presentation .presentation-buttons .info-button {
 .movie-list-container h1{
     margin: 2rem 0;
 }
-.movie-list-wrapper{
+.movie-list-container .movie-list-wrapper{
     overflow: hidden;
+    position: relative;
 }
-.movie-list{
+.movie-list-container .movie-list-wrapper .movie-list{
     list-style: none;
     padding: 0;
     height: 12rem;
     display: flex;
     align-items: center;
     column-gap: 3rem;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
     
 }
-.movie-item{
+.movie-list-container .movie-list-wrapper .movie-list .movie-item{
     position: relative;
 }
-.movie-item-img{
+.movie-list-container .movie-list-wrapper .movie-list .movie-item .movie-item-img{
     width: 25rem;
     height: 15rem;
     object-fit: cover;
     transition: 0.5s all ease;
 }
-.movie-item-title{
+.movie-list-container .movie-list-wrapper .movie-list .movie-item .movie-item-info .movie-item-title{
     background-color: rgba(40, 40, 40, 0.4);
     padding: 0 10px;
     font-size: 2rem;
@@ -208,7 +211,7 @@ section .presentation .presentation-buttons .info-button {
     opacity: 0;
     transition: 0.5s all ease;
 }
-.movie-item-buttons{
+.movie-list-container .movie-list-wrapper .movie-list .movie-item .movie-item-info .movie-item-buttons{
     background-color: rgba(40, 40, 40, 0.4);
     padding: 10px;
     font-size: 1.5rem;
@@ -223,7 +226,7 @@ section .presentation .presentation-buttons .info-button {
     transition: 0.5s all ease;
 }
 
-.movie-item-buttons i{
+.movie-list-container .movie-list-wrapper .movie-list .movie-item .movie-item-info .movie-item-buttons i{
     cursor: pointer;
     opacity: 0.5;
     font-size: 2rem;
@@ -238,6 +241,20 @@ section .presentation .presentation-buttons .info-button {
     opacity: 0.5;
     transform:scale(1.2);
     margin: 0 2rem;
+}
+.movie-list-container .movie-list-wrapper .arrow{
+    width: 10rem;
+    display: flex;
+    font-size: 12rem;
+    position: absolute;
+    right: 0;
+    top:3px;
+    opacity: 0.5;
+    transition: 0.5 ease all;
+    cursor: pointer;
+}
+.arrow:hover{
+    opacity: 1;
 }
 /* article (movie list) end */
 /* section end
