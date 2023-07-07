@@ -165,6 +165,7 @@ section .presentation .presentation-buttons {
   display: flex;
   column-gap: 1rem;
   margin-left: 3rem;
+  flex-wrap: wrap;
 }
 section .presentation .presentation-buttons button {
   padding: 15px 25px;
