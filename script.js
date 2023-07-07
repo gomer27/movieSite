@@ -16,3 +16,14 @@ arrows.forEach((arrow, i) => {
   });
 });
 // slide end
+
+// dark mode start
+const ball = document.querySelector(".toggle-ball");
+const items = document.querySelectorAll(
+  "header nav,aside,section,.movie-list-title,.movie-list-filter #filter-movie,.toggle,.toggle-ball,aside i"
+);
+ball.addEventListener("click", function () {
+  console.log(items);
+  items.forEach((item) => item.classList.toggle("active"));
+});
+// dark mode end

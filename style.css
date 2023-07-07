@@ -17,7 +17,39 @@ section {
 }
 /* base css end */
 
-  
+/* dark mode start */
+header nav.active {
+  background-color: white;
+  color: black;
+}
+.toggle.active {
+  border: 1px solid black;
+}
+.toggle-ball.active {
+  background-color: black;
+  transform: translateX(-1rem);
+}
+section.active {
+  background-color: white;
+}
+aside.active {
+  background-color: white;
+}
+aside i.active {
+  color: black;
+}
+.movie-list-filter #filter-movie.active {
+  background-color: white;
+  color: black;
+}
+.movie-list-container.active {
+  background-color: white;
+}
+.movie-list-title.active {
+  color: black;
+}
+/* dark mode end */
+
 /* navbar start */
 header nav {
   background-color: black;
@@ -215,11 +247,11 @@ section .presentation .presentation-buttons .info-button {
   font-size: 2rem;
   font-weight: bold;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 3rem;
   color: white;
   opacity: 0;
-  transition: 0.5s all ease;
+  transition: 1s all ease-in-out;
 }
 .movie-list-container
   .movie-list-wrapper
@@ -229,16 +261,15 @@ section .presentation .presentation-buttons .info-button {
   .movie-item-buttons {
   background-color: rgba(40, 40, 40, 0.4);
   padding: 10px;
-  font-size: 1.5rem;
   font-weight: bold;
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 3rem;
   color: white;
   display: flex;
   column-gap: 2rem;
   opacity: 0;
-  transition: 0.5s all ease;
+  transition: 1s all ease-in-out;
 }
 
 .movie-list-container
@@ -250,12 +281,12 @@ section .presentation .presentation-buttons .info-button {
   i {
   cursor: pointer;
   opacity: 0.5;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: 0.5s all ease;
 }
 .movie-item:hover .movie-item-title,
 .movie-item:hover .movie-item-buttons {
-  opacity: 1;
+  opacity: 1 !important;
   transition: 1s all ease-in-out;
 }
 .movie-item:hover .movie-item-img {
@@ -279,3 +310,4 @@ section .presentation .presentation-buttons .info-button {
 }
 /* article (movie list) end */
 /* section end
+
